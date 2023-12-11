@@ -1,0 +1,92 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.portfolio {
+  padding: 4rem o;
+
+  button {
+    color: $tertiary;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-family: "Petit Formal Script", cursive;
+  }
+}
+
+.portfolio-box {
+  position: relative;
+  width: 100%;
+  height: 18.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-top: 0.5rem solid $blue-dark;
+
+  img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(100%);
+  }
+
+  .portfolio-info {
+    background-color: rgba($secondary, 0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    .caption {
+      text-align: center;
+      color: $gray-800;
+      @include absoluteCenter;
+
+      h3 {
+        font-size: 2rem;
+        display: block;
+        font-weight: 600;
+        font-family: "Petit Formal Script", cursive;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-family: "Quicksand", sans-serif;
+        line-height: 1.6rem;
+      }
+
+      button {
+        border-color: $gray-800;
+        color: $gray-800;
+        font-family: "Quicksand", sans-serif;
+
+        &:hover {
+          background-color: $gray-800;
+          color: $white;
+        }
+
+        a {
+          text-decoration: none;
+          color: $gray-800;
+
+          &:hover {
+            background-color: $gray-800;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+      @include transitionProperty;
+    }
+    .portfolio-info {
+      opacity: 1;
+      visibility: visible;
+      @include transitionProperty;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "custom";
+
+//import the components
+
+@use "components/animation";
+@use "components/buttons";
+@use "components/mixins";
+@use "components/typography";
+
+//import the sections
+
+@use "sections/navbar";
+@use "sections/intro";
+@use "sections/my-work";
+@use "sections/get-in-touch";
+@use "sections/footer";

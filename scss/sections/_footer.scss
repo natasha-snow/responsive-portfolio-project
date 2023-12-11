@@ -1,0 +1,124 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.footer {
+  padding: 1rem;
+  background-color: $gray-800;
+  margin-top: 10rem;
+}
+
+//STYLE THE CONTACT-BOX CONTENT
+.contact-box {
+  position: relative;
+
+  &__icon {
+    width: 4rem;
+    stroke: $tertiary;
+
+    i {
+      font-size: 2.8rem;
+      color: $tertiary;
+      padding-top: 0.4rem;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__info {
+    padding: 0.4rem;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: $tertiary;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 0.8rem;
+      }
+    }
+
+    p {
+      color: $gray-600;
+      text-decoration: none;
+      font-size: 1rem;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+//STYLE THE SOCIAL MEDIA CONTENT
+.footer-sm {
+  background-color: $gray-700;
+  color: $white;
+  padding-bottom: 0rem;
+
+  p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+  }
+
+  a {
+    color: $white;
+
+    i {
+      font-size: 1.4rem;
+      margin-left: 1rem;
+
+      &:hover {
+        color: $tertiary;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//STYLE THE COPYRIGHT CONTENT
+.footer-bottom {
+  background-color: $gray-800;
+  font-family: "Quicksand", sans-serif;
+
+  &__copyright {
+    color: $gray-600;
+    font-weight: 400;
+
+    a {
+      color: $gray-300;
+      text-decoration: none;
+
+      &:hover {
+        color: $tertiary;
+      }
+    }
+  }
+}
+
+//STYLE THE BACK TO TOP BUTTON
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+  color: $secondary;
+
+  i {
+    color: $tertiary;
+    font-size: 1rem;
+    @include absoluteCenter;
+  }
+}

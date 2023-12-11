@@ -1,0 +1,18 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.menu {
+  @include gradient;
+
+  .links {
+    padding: 0 15px 0 30px;
+
+    a {
+      font-family: "Quicksand", sans-serif;
+      color: $gray-900 !important;
+      font-weight: 400;
+      font-size: large;
+      text-align: center;
+    }
+  }
+}
