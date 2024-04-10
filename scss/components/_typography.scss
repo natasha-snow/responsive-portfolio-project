@@ -194,7 +194,7 @@ h4 {
   border-radius: 10px;
   width: 1005;
   height: 5px;
-  background-color: #fff;
+  background-color: #000;
   animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
   transform: scaleX(0);
   transform-origin: left;
@@ -208,7 +208,7 @@ h4 {
 
 .technical-bars .bar .progress-line span {
   height: 100%;
-  background-color: $secondary;
+  background-color: #fff;
   position: absolute;
   border-radius: 10px;
   animation: animate 1s 1s cubic-beizer(1, 0, 0, 5, 1);
@@ -223,20 +223,78 @@ h4 {
   width: 90%;
 }
 .progress-line.javascript span {
-  width: 90%;
+  width: 50%;
 }
-.progress-line.html span {
-  width: 90%;
+.progress-line.nodejs span {
+  width: 60%;
 }
 .progress-line.scss span {
-  width: 90%;
+  width: 50%;
 }
 .progress-line.git span {
-  width: 90%;
+  width: 70%;
 }
 .progress-line.github span {
-  width: 90%;
+  width: 80%;
 }
+
+.progress-line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -20px;
+  right: -20px;
+  animation: headerText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+.progress-line.html span::after {
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "90%";
+}
+.progress-line.javascript span::after {
+  content: "50%";
+}
+.progress-line.nodejs span::after {
+  content: "60%";
+}
+.progress-line.scss span::after {
+  content: "50%";
+}
+.progress-line.git span::after {
+  content: "70%";
+}
+.progress-line.github span::after {
+  content: "80%";
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  top: -10px;
+  right: 0;
+  animation: headerText 0.5s 1.5s linear forwards;
+  opacity: 0
+}
+
+@keyframes headerText {
+  100% {
+    opacity: 1;
+  }
+}
+
+ 
 
 
 
